@@ -25,7 +25,7 @@ dotnet ef database update -p .\Assessment.Core\ -s .\Assessment.API\
 ### Assessment.BE-V2
 This is another approach I took using clean architecture 
 1. Currently you have to add books manually on the database 
-NB TODO Create a script to seed books 
+### NB TODO Create a script to seed books to database
 
 Enjoy!!!
 
