@@ -1,1 +1,1 @@
-# Image-bookstore
+# Imagine-bookstore
