@@ -16,11 +16,16 @@ This system allows book lovers to subscribe to their favourite books and enjoy t
 2. Then they will have the hit the login endpoint to obtain token
 3. Use the token the access the other authorized endpoints
 
-### Build Instructions
+## Build Instructions
+### Assessment.BE
 1. Run the following on the root of Assessment.BE to create and seed the database
 ```
 dotnet ef database update -p .\Assessment.Core\ -s .\Assessment.API\
 ```
+### Assessment.BE-V2
+This is another approach I took using clean architecture 
+1. Currently you have to add books manually on the database 
+NB TODO Create a script to seed books 
 
 Enjoy!!!
 
