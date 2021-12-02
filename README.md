@@ -1,7 +1,7 @@
 
 
 # Introduction
-Imagine bookstore
+### Imagine bookstore
 This system allows book lovers to subscribe to their favourite books and enjoy them. Simply register on the application and subscribe to the books you love.
 
 
