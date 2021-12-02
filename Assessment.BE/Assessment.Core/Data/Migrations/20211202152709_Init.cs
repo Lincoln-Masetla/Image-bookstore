@@ -51,7 +51,7 @@ namespace Assessment.Core.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     Title = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true)
                 },
@@ -65,8 +65,8 @@ namespace Assessment.Core.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<int>(nullable: false),
+                        .Annotation("Sqlite:Autoincrement", true),
+                    UserId = table.Column<Guid>(nullable: false),
                     BookId = table.Column<int>(nullable: false),
                     CreatedDate = table.Column<DateTime>(nullable: false),
                     UpdatedDate = table.Column<DateTime>(nullable: false)
@@ -81,7 +81,7 @@ namespace Assessment.Core.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     RoleId = table.Column<string>(nullable: false),
                     ClaimType = table.Column<string>(nullable: true),
                     ClaimValue = table.Column<string>(nullable: true)
@@ -102,7 +102,7 @@ namespace Assessment.Core.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     UserId = table.Column<string>(nullable: false),
                     ClaimType = table.Column<string>(nullable: true),
                     ClaimValue = table.Column<string>(nullable: true)
@@ -182,6 +182,36 @@ namespace Assessment.Core.Data.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "Books",
+                columns: new[] { "Id", "Description", "Title" },
+                values: new object[] { 1, "By Katie Kitamura", "Intimacies" });
+
+            migrationBuilder.InsertData(
+                table: "Books",
+                columns: new[] { "Id", "Description", "Title" },
+                values: new object[] { 2, "By Honorée Fanonne Jeffers", "The Love Songs of W.E.B. Du Bois" });
+
+            migrationBuilder.InsertData(
+                table: "Books",
+                columns: new[] { "Id", "Description", "Title" },
+                values: new object[] { 3, "By Patricia Lockwood", "No One Is Talking About This" });
+
+            migrationBuilder.InsertData(
+                table: "Books",
+                columns: new[] { "Id", "Description", "Title" },
+                values: new object[] { 4, "By Benjamín Labatut. Translated by Adrian Nathan West.", "When We Cease to Understand the World" });
+
+            migrationBuilder.InsertData(
+                table: "Books",
+                columns: new[] { "Id", "Description", "Title" },
+                values: new object[] { 5, "By Tove Ditlevsen. Translated by Tiina Nunnally and Michael Favala Goldman.", "The Copenhagen Trilogy: Childhood; Youth; Dependency" });
+
+            migrationBuilder.InsertData(
+                table: "Books",
+                columns: new[] { "Id", "Description", "Title" },
+                values: new object[] { 6, "By Clint Smith", "How the Word Is Passed: A Reckoning With the History of Slavery Across America" });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -191,8 +221,7 @@ namespace Assessment.Core.Data.Migrations
                 name: "RoleNameIndex",
                 table: "AspNetRoles",
                 column: "NormalizedName",
-                unique: true,
-                filter: "[NormalizedName] IS NOT NULL");
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetUserClaims_UserId",
@@ -218,8 +247,7 @@ namespace Assessment.Core.Data.Migrations
                 name: "UserNameIndex",
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
-                unique: true,
-                filter: "[NormalizedUserName] IS NOT NULL");
+                unique: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
