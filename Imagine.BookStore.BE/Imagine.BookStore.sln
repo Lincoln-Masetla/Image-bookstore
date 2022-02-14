@@ -23,38 +23,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Imagine.BookStore.Persisten
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{8B579365-0419-43FA-95EA-3A25B323A4FE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{B01E6481-B125-4531-B85B-C5D55F1344F4}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{BBB6D03B-6CCA-45CC-ABC9-FFCD6319E264}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Imagine.BookStore.Database", "Imagine.BookStore.Database\Imagine.BookStore.Database.sqlproj", "{39765178-EAFC-49F0-AAB0-072DF6B45242}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Imagine.BookStore.FE", "..\Imagine.BookStore.FE\", "{0ADB79EF-362D-4934-AD31-A1BA8F1449D2}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_50962"
-		Debug.AspNetCompiler.PhysicalPath = "..\Imagine.BookStore.FE\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50962\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_50962"
-		Release.AspNetCompiler.PhysicalPath = "..\Imagine.BookStore.FE\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50962\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "50962"
-		SlnRelativePath = "..\Imagine.BookStore.FE\"
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Imagine.BookStore.Test.Integration", "Imagine.BookStore.Test.Integration\Imagine.BookStore.Test.Integration.csproj", "{D3B5BAFD-1943-4108-A59B-49ED7ED2A85E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imagine.BookStore.Test.Integration", "Imagine.BookStore.Test.Integration\Imagine.BookStore.Test.Integration.csproj", "{D3B5BAFD-1943-4108-A59B-49ED7ED2A85E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Imagine.BookStore.Test.Unit.Domain", "Imagine.BookStore.Test.Unit.Domain\Imagine.BookStore.Test.Unit.Domain.csproj", "{EBDA85C0-00A6-4997-82B2-E1DCA61D9734}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imagine.BookStore.Test.Unit.Domain", "Imagine.BookStore.Test.Unit.Domain\Imagine.BookStore.Test.Unit.Domain.csproj", "{EBDA85C0-00A6-4997-82B2-E1DCA61D9734}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imagine.BookStore.Test.Unit.Persistance", "Imagine.BookStore.Test.Unit.Persistance\Imagine.BookStore.Test.Unit.Persistance.csproj", "{547BC127-085D-4577-A6A8-652AF2772504}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Imagine.BookStore.Test.Unit.Persistance", "Imagine.BookStore.Test.Unit.Persistance\Imagine.BookStore.Test.Unit.Persistance.csproj", "{547BC127-085D-4577-A6A8-652AF2772504}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -84,10 +61,6 @@ Global
 		{39765178-EAFC-49F0-AAB0-072DF6B45242}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39765178-EAFC-49F0-AAB0-072DF6B45242}.Release|Any CPU.Build.0 = Release|Any CPU
 		{39765178-EAFC-49F0-AAB0-072DF6B45242}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{0ADB79EF-362D-4934-AD31-A1BA8F1449D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0ADB79EF-362D-4934-AD31-A1BA8F1449D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0ADB79EF-362D-4934-AD31-A1BA8F1449D2}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{0ADB79EF-362D-4934-AD31-A1BA8F1449D2}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{D3B5BAFD-1943-4108-A59B-49ED7ED2A85E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D3B5BAFD-1943-4108-A59B-49ED7ED2A85E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3B5BAFD-1943-4108-A59B-49ED7ED2A85E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -113,10 +86,8 @@ Global
 		{1801CEFE-3987-48BE-A753-7874052A9916} = {F5EAAF5C-9DD1-4915-AA1A-FCA56DBFE9F2}
 		{C9F5052E-CC0F-4CEC-92C4-0FDC0320707B} = {1801CEFE-3987-48BE-A753-7874052A9916}
 		{8B579365-0419-43FA-95EA-3A25B323A4FE} = {F9DBB3F6-40C8-4F7A-B823-A4ACD4C9D131}
-		{B01E6481-B125-4531-B85B-C5D55F1344F4} = {F9DBB3F6-40C8-4F7A-B823-A4ACD4C9D131}
 		{BBB6D03B-6CCA-45CC-ABC9-FFCD6319E264} = {F5EAAF5C-9DD1-4915-AA1A-FCA56DBFE9F2}
 		{39765178-EAFC-49F0-AAB0-072DF6B45242} = {BBB6D03B-6CCA-45CC-ABC9-FFCD6319E264}
-		{0ADB79EF-362D-4934-AD31-A1BA8F1449D2} = {B01E6481-B125-4531-B85B-C5D55F1344F4}
 		{D3B5BAFD-1943-4108-A59B-49ED7ED2A85E} = {9AE6059D-FECE-4838-8FDA-F9268DD747D7}
 		{EBDA85C0-00A6-4997-82B2-E1DCA61D9734} = {9AE6059D-FECE-4838-8FDA-F9268DD747D7}
 		{547BC127-085D-4577-A6A8-652AF2772504} = {9AE6059D-FECE-4838-8FDA-F9268DD747D7}

@@ -180,6 +180,19 @@ namespace Imagine.BookStore.Persistence.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "Books",
+                columns: new[] { "Id", "Name", "PurchasePrice" },
+                values: new object[,]
+                {
+                    { new Guid("1427f3ee-600a-4037-b7d3-7605d29ffacb"), "How the Word Is Passed: A Reckoning With the History of Slavery Across America", 60m },
+                    { new Guid("17ff4ecc-e23c-468b-b2a4-937003248e4f"), "The Copenhagen Trilogy: Childhood; Youth; Dependency", 50m },
+                    { new Guid("5d107b82-f29d-467a-95c5-03312cdeb2a2"), "When We Cease to Understand the World", 40m },
+                    { new Guid("92f3b72e-7d8c-4e9a-b85f-dabdc9beb44b"), "Intimacies", 10m },
+                    { new Guid("ada15393-0b9f-4bfa-aa67-f18087fb3667"), "The Love Songs of W.E.B. Du Bois", 20m },
+                    { new Guid("ced7f02b-3a6b-45d9-a53a-af0570d0134b"), "No One Is Talking About This", 30m }
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",

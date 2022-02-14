@@ -38,6 +38,44 @@ namespace Imagine.BookStore.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Books");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("92f3b72e-7d8c-4e9a-b85f-dabdc9beb44b"),
+                            Name = "Intimacies",
+                            PurchasePrice = 10m
+                        },
+                        new
+                        {
+                            Id = new Guid("ada15393-0b9f-4bfa-aa67-f18087fb3667"),
+                            Name = "The Love Songs of W.E.B. Du Bois",
+                            PurchasePrice = 20m
+                        },
+                        new
+                        {
+                            Id = new Guid("ced7f02b-3a6b-45d9-a53a-af0570d0134b"),
+                            Name = "No One Is Talking About This",
+                            PurchasePrice = 30m
+                        },
+                        new
+                        {
+                            Id = new Guid("5d107b82-f29d-467a-95c5-03312cdeb2a2"),
+                            Name = "When We Cease to Understand the World",
+                            PurchasePrice = 40m
+                        },
+                        new
+                        {
+                            Id = new Guid("17ff4ecc-e23c-468b-b2a4-937003248e4f"),
+                            Name = "The Copenhagen Trilogy: Childhood; Youth; Dependency",
+                            PurchasePrice = 50m
+                        },
+                        new
+                        {
+                            Id = new Guid("1427f3ee-600a-4037-b7d3-7605d29ffacb"),
+                            Name = "How the Word Is Passed: A Reckoning With the History of Slavery Across America",
+                            PurchasePrice = 60m
+                        });
                 });
 
             modelBuilder.Entity("Imagine.BookStore.Domain.Entities.Subscription", b =>
