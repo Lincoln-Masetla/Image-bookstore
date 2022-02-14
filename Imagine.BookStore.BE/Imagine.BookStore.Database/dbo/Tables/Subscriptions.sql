@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Subscriptions] (
+    [Id]     UNIQUEIDENTIFIER NOT NULL,
+    [UserId] UNIQUEIDENTIFIER NOT NULL,
+    [BookId] UNIQUEIDENTIFIER NOT NULL,
+    CONSTRAINT [PK_Subscriptions] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

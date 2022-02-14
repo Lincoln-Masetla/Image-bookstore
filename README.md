@@ -6,8 +6,8 @@ This system allows book lovers to subscribe to their favourite books and enjoy t
 
 
 ### Summary
-1. API was done in Asp.Net Core 3.1  
-2. The Web UI was done in the latest angular version of angular: Angular CLI version 12.2.8.
+1. API was done in Asp.Net 6.0  
+2. The Web UI was done in the angular version of angular: Angular CLI version 12.2.8.
 3. Please see swagger documentation for endpoints ie Swagger is showed when API is ran.
 4. The API uses sqllite and the database is found on the Assessment.API root directory.
 
@@ -17,15 +17,19 @@ This system allows book lovers to subscribe to their favourite books and enjoy t
 3. Use the token the access the other authorized endpoints
 
 ## Build Instructions
-### Assessment.BE
-1. Run the following on the root of Assessment.BE to create and seed the database
+### Imagine.BookStore.BE
+1. Run the following on the root of Imagine.BookStore.BE to create and seed the database
+In visual studio open Package Manager Console set Imagine.BookStore.Persistence as Default project then run
 ```
-dotnet ef database update -p .\Assessment.Core\ -s .\Assessment.API\
+update-database
 ```
-### Assessment.BE-V2
-This is another approach I took using clean architecture 
-1. Currently you have to add books manually on the database 
-#### NB TODO Create a script to seed books to database
+### Imagine.BookStore.FE
+1. Run the following on the root of Imagine.BookStore.BE to create and seed the database
+```
+cd Imagine.BookStore.FE
+npm i 
+npm start
+```
 
 Enjoy!!!
 
