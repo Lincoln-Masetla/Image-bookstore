@@ -1,6 +1,5 @@
 ﻿using Imagine.BookStore.Application.Contracts;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -10,33 +9,29 @@ namespace Imagine.BookStore.Persistence.Authentication;
 
 public class JWTTokenGenerator : IJWTTokenGenerator
 {
-	private readonly IConfiguration _config;
+    public JWTTokenGenerator()
+    {
+    }
+    public string GenerateToken(IdentityUser user, IList<Claim> claims)
+    {
+        claims.Add(new Claim(JwtRegisteredClaimNames.Email, user.Email));
 
-	public JWTTokenGenerator(IConfiguration config)
-	{
-		_config = config;
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Constants.Key));
 
-	}
-	public string GenerateToken(IdentityUser user, IList<Claim> claims)
-	{
-		claims.Add(new Claim(JwtRegisteredClaimNames.Email, user.Email));
+        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);
 
-		var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["ConnectionStrings:Key"]));
+        var tokenDescriptor = new SecurityTokenDescriptor
+        {
+            Subject = new ClaimsIdentity(claims),
+            Expires = DateTime.Now.AddDays(7),
+            SigningCredentials = creds,
+            Issuer = Constants.Issuer,
+        };
 
-		var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);
+        var tokenHandler = new JwtSecurityTokenHandler();
 
-		var tokenDescriptor = new SecurityTokenDescriptor
-		{
-			Subject = new ClaimsIdentity(claims),
-			Expires = DateTime.Now.AddDays(7),
-			SigningCredentials = creds,
-			Issuer = _config["ConnectionStrings:Issuer"],
-		};
+        var token = tokenHandler.CreateToken(tokenDescriptor);
 
-		var tokenHandler = new JwtSecurityTokenHandler();
-
-		var token = tokenHandler.CreateToken(tokenDescriptor);
-
-		return tokenHandler.WriteToken(token);
-	}
+        return tokenHandler.WriteToken(token);
+    }
 }

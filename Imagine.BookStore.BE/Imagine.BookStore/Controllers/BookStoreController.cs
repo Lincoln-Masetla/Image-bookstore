@@ -19,7 +19,7 @@ namespace Imagine.BookStore.Controllers
         [HttpGet("subscriptions/{id}")]
         public async Task<IActionResult> GetSubscriptions([FromRoute] Guid id)
         {
-            var dtos = await Mediator.Send(new GetUserSubscriptionListQuery { UserId = id});
+            var dtos = await Mediator.Send(new GetUserSubscriptionListQuery { UserId = id });
             return Ok(await Task.FromResult(dtos));
         }
 

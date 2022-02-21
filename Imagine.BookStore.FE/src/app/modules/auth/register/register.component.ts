@@ -11,13 +11,11 @@ import { AuthService } from '../resources/auth.service';
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
-  roleOptions: string[] = ['User', 'Api'];
 
   model: any = {
     username: null,
     email: null,
     password: null,
-    role: 'User',
   };
   constructor(
     private progressService: ProgressbarService,

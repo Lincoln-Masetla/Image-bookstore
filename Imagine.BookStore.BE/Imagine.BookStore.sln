@@ -31,8 +31,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Imagine.BookStore.Test.Inte
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Imagine.BookStore.Test.Unit.Domain", "Imagine.BookStore.Test.Unit.Domain\Imagine.BookStore.Test.Unit.Domain.csproj", "{EBDA85C0-00A6-4997-82B2-E1DCA61D9734}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Imagine.BookStore.Test.Unit.Persistance", "Imagine.BookStore.Test.Unit.Persistance\Imagine.BookStore.Test.Unit.Persistance.csproj", "{547BC127-085D-4577-A6A8-652AF2772504}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,10 +67,6 @@ Global
 		{EBDA85C0-00A6-4997-82B2-E1DCA61D9734}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBDA85C0-00A6-4997-82B2-E1DCA61D9734}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBDA85C0-00A6-4997-82B2-E1DCA61D9734}.Release|Any CPU.Build.0 = Release|Any CPU
-		{547BC127-085D-4577-A6A8-652AF2772504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{547BC127-085D-4577-A6A8-652AF2772504}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{547BC127-085D-4577-A6A8-652AF2772504}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{547BC127-085D-4577-A6A8-652AF2772504}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,7 +84,6 @@ Global
 		{39765178-EAFC-49F0-AAB0-072DF6B45242} = {BBB6D03B-6CCA-45CC-ABC9-FFCD6319E264}
 		{D3B5BAFD-1943-4108-A59B-49ED7ED2A85E} = {9AE6059D-FECE-4838-8FDA-F9268DD747D7}
 		{EBDA85C0-00A6-4997-82B2-E1DCA61D9734} = {9AE6059D-FECE-4838-8FDA-F9268DD747D7}
-		{547BC127-085D-4577-A6A8-652AF2772504} = {9AE6059D-FECE-4838-8FDA-F9268DD747D7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {85357AAC-C600-4614-A4B7-591DD8FEF3E4}
